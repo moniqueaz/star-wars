@@ -1,4 +1,6 @@
 import { Container } from 'components/atoms/Container';
+import Header from 'components/organisms/Header';
+import * as S from './styles';
 
 type TemplateProps = {
   children?: React.ReactNode
@@ -6,9 +8,12 @@ type TemplateProps = {
 
 const Template = ( { children }: TemplateProps) => {
   return (
-    <Container>
-      {children}
-    </Container>
+    <S.Wrapper>
+      <Header />
+      <Container>
+        {children}
+      </Container>
+    </S.Wrapper>
   );
 };
 

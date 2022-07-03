@@ -6,6 +6,6 @@ export const Container = styled.div`
     margin: 0 auto;
     max-width: 1250px;
     width: 100%;
-    background-color: ${theme.colors.lightGray};
+    background-color: ${theme.colors.mainBg};
   `}
 `;

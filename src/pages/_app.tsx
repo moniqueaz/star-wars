@@ -9,11 +9,11 @@ function MyApp( { Component, pageProps }: AppProps) {
   return (
     <ThemeProvider theme={theme}>
       <Head>
-        <title>My Plannign</title>
-        <link rel="shortcut icon" href="/img/icon-abacate-96.png" />
-        <link rel="apple-touch-icon" href="/img/icon-abacate-96.png" />
+        <title>Star Wars Card Game</title>
+        <link rel="shortcut icon" href="/img/icon-96.png" />
+        <link rel="apple-touch-icon" href="/img/icon-96.png" />
         <link rel="manifest" href="/manifest.json" />
-        <meta name="description" content="Um melhor controle da sua dieta" />
+        <meta name="description" content="Star Wars Card Game" />
       </Head>
       <GlobalStyles />
       <Template>
