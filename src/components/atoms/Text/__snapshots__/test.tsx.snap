@@ -1,7 +1,64 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Text /> should render the heading 1`] = `
+exports[`<Text /> should render 1`] = `
 .c0 {
+  width: 100%;
+  color: #1A4173;
+  font-size: 1.6rem;
+}
+
+<p
+  class="c0"
+>
+  Texto do paragrafo
+</p>
+`;
+
+exports[`<Text /> should render text large 1`] = `
+.c0 {
+  width: 100%;
+  color: #1A4173;
+  font-size: 1.8rem;
+}
+
+<p
+  class="c0"
+>
+  Texto do paragrafo
+</p>
+`;
+
+exports[`<Text /> should render text light 1`] = `
+.c0 {
+  width: 100%;
+  color: #f1f1f1;
+  font-size: 1.6rem;
+}
+
+<p
+  class="c0"
+>
+  Texto do paragrafo
+</p>
+`;
+
+exports[`<Text /> should render text medium 1`] = `
+.c0 {
+  width: 100%;
+  color: #1A4173;
+  font-size: 1.6rem;
+}
+
+<p
+  class="c0"
+>
+  Texto do paragrafo
+</p>
+`;
+
+exports[`<Text /> should render text small 1`] = `
+.c0 {
+  width: 100%;
   color: #1A4173;
   font-size: 1.4rem;
 }

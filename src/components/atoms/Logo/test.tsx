@@ -4,7 +4,7 @@ import { render, screen } from '@testing-library/react';
 import Logo from '.';
 
 describe('<Logo />', () => {
-  it('should render the heading', () => {
+  it('should render', () => {
     const { container } = render(<Logo data-testid="Logo"/>);
     expect(screen.getByAltText('logo star wars')).toBeInTheDocument();
 
