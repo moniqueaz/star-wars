@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Template /> should render the heading 1`] = `
+<div
+  data-testid="Mock Container"
+>
+  <div
+    data-testid="Template"
+  >
+    Template
+  </div>
+</div>
+`;
