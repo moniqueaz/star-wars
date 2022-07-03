@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Logo /> should render the heading 1`] = `
+.c0 {
+  width: 15rem;
+  height: auto;
+}
+
+@media (min-width:1024px) {
+  .c0 {
+    width: 25rem;
+  }
+}
+
+<img
+  alt="logo star wars"
+  class="c0"
+  src="/img/logo.png"
+/>
+`;

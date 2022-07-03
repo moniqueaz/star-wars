@@ -6,7 +6,7 @@ import Logo from '.';
 describe('<Logo />', () => {
   it('should render the heading', () => {
     const { container } = render(<Logo data-testid="Logo"/>);
-    expect(screen.getByTestId('Logo')).toBeInTheDocument();
+    expect(screen.getByAltText('logo star wars')).toBeInTheDocument();
 
     expect(container.firstChild).toMatchSnapshot();
   } );

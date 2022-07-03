@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Text /> should render the heading 1`] = `
+.c0 {
+  color: #1A4173;
+  font-size: 1.4rem;
+}
+
+<p
+  class="c0"
+>
+  Texto do paragrafo
+</p>
+`;
