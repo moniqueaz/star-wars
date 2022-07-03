@@ -1,0 +1,29 @@
+// import {{pascalCase name}} from 'templates/{{pascalCase name}}';
+
+// ATENÇÃO:
+// remover any e definir os types
+const {{pascalCase name}} = (props: any) => (
+  <>
+    <h1>{{pascalCase name}}</h1>
+    {/* <{{pascalCase name}} {...props} /> */}
+  </>
+);
+
+// ATENÇÃO:
+// os métodos getStaticProps/getServerSideProps SÓ FUNCIONAM EM PAGES
+
+// getStaticProps => gerar estático em build time
+// getServerSideProps => gerar via ssr a cada request
+// getInitialProps => gerar via ssr a cada request
+export function getServerSideProps() {
+  // faz lógica
+  // pode ser buscar dados numa API
+  // fazer calculo|leitura de context
+
+  // retorno dos dados
+  return {
+    props: {},
+  };
+}
+
+export default {{pascalCase name}};
