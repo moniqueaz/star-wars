@@ -3,6 +3,7 @@ import Head from 'next/head';
 import * as S from './styles';
 import useSWR from 'swr';
 import { fetcher } from 'utils/helpers';
+import Card from 'components/molecules/Card';
 const Home: NextPage = () => {
   const { data, error, isValidating } = useSWR(
       '/api/getAll',
@@ -29,7 +30,9 @@ const Home: NextPage = () => {
           {
             Object.keys(data).map(item => (
               <S.Item key={item}>
-                <S.Link href={`/${item}`}>{item}</S.Link>
+                <S.Link href={`/${item}`}>
+                  <Card title={item} image="https://via.placeholder.com/250"/>
+                </S.Link>
               </S.Item>
             ))
           }
