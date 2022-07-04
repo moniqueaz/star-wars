@@ -2,12 +2,12 @@ import { Story, Meta } from '@storybook/react/types-6-0';
 import Title from '.';
 
 export default {
-  title: 'Title',
+  title: 'Atoms/Title',
   component: Title,
 } as Meta;
 
-export const Default: Story = () => {
-  return <Title>Titulo</Title>;
+export const Default: Story = args => {
+  return <Title {...args}>Titulo</Title>;
 };
 
 export const SessionTitle: Story = () => {
@@ -16,4 +16,14 @@ export const SessionTitle: Story = () => {
 
 export const SubTitle: Story = () => {
   return <Title type="subTitle">Subtitulo</Title>;
+};
+
+export const Dark: Story = () => {
+  return <Title color="dark">Title</Title>;
+};
+
+Dark.parameters = {
+  backgrounds: {
+    default: 'light',
+  },
 };

@@ -28,4 +28,14 @@ describe('<Title />', () => {
     const { container } = renderWithTheme(<Title />);
     expect(container.querySelector('h1')).not.toBeInTheDocument();
   } );
+
+  it('should render title dark', () => {
+    const { container } = renderWithTheme(<Title color="dark">Titulo</Title>);
+    expect(container.querySelector('h1')).toHaveStyle( { color: '#1A4173' } );
+  } );
+
+  it('should render title light', () => {
+    const { container } = renderWithTheme(<Title>Titulo</Title>);
+    expect(container.querySelector('h1')).toHaveStyle( { color: '#f1f1f1' } );
+  } );
 } );

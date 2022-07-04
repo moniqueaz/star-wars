@@ -151,6 +151,7 @@ exports[`<Template /> should render the heading 1`] = `
     >
       <p
         class="c5"
+        color="light"
       >
         Star Wars Card Game
       </p>

@@ -1,6 +1,19 @@
-import styled, { css } from 'styled-components';
+import styled, { css, DefaultTheme } from 'styled-components';
 
-export const Wrapper = styled.div``;
+const getColor = {
+  light: (theme: DefaultTheme) => css`color: ${theme.colors.white}`,
+  dark: (theme: DefaultTheme) => css`color: ${theme.colors.primary}`,
+};
+
+type WrapperProps = { color: 'light' | 'dark' }
+
+export const Wrapper = styled.div<WrapperProps>`
+  ${( { theme, color } ) => css`
+    h1, h2, h3{
+      ${getColor[color](theme)}
+    }
+  `}
+`;
 
 export const Title = styled.h1`
   ${( { theme } ) => css`

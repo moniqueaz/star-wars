@@ -1,15 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Title /> should render Title 1`] = `
-.c0 {
+.c0 h1,
+.c0 h2,
+.c0 h3 {
+  color: #f1f1f1;
+}
+
+.c1 {
   font-size: 2.8rem;
 }
 
 <div
-  class=""
+  class="c0"
+  color="light"
 >
   <h1
-    class="c0"
+    class="c1"
   >
     Titulo
   </h1>

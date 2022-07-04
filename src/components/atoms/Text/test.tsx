@@ -13,8 +13,13 @@ describe('<Text />', () => {
   } );
 
   it('should render text light', () => {
-    renderWithTheme(<Text light>Texto do paragrafo</Text>);
+    renderWithTheme(<Text>Texto do paragrafo</Text>);
     expect(screen.getByText('Texto do paragrafo')).toHaveStyle( { color: '#f1f1f1' } );
+  } );
+
+  it('should render text dark', () => {
+    renderWithTheme(<Text color="dark">Texto do paragrafo</Text>);
+    expect(screen.getByText('Texto do paragrafo')).toHaveStyle( { color: '#1A4173' } );
   } );
 
   it('should render text small', () => {

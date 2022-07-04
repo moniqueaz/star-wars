@@ -1,6 +1,6 @@
 import styled, { css, DefaultTheme } from 'styled-components';
 
-type WrapperProps = { light: boolean, size: 'small' | 'medium' | 'large' }
+type WrapperProps = { color: 'light' | 'dark', size: 'small' | 'medium' | 'large' }
 
 const wrapperModifiers = {
   small: (theme: DefaultTheme) => css`
@@ -10,14 +10,16 @@ const wrapperModifiers = {
     font-size: ${theme.font.sizes.medium};
   `,
   large: (theme: DefaultTheme) => css`
-  font-size: ${theme.font.sizes.large};
-`,
+    font-size: ${theme.font.sizes.large};
+  `,
+  light: (theme: DefaultTheme) => css`color: ${theme.colors.white}`,
+  dark: (theme: DefaultTheme) => css`color: ${theme.colors.primary}`,
 };
 
 export const Wrapper = styled.p<WrapperProps>`
-  ${( { theme, light, size } ) => css`
+  ${( { theme, color, size } ) => css`
       width: 100%;
-      color: ${light ? theme.colors.white : theme.colors.primary};
+      ${wrapperModifiers[color](theme)};
       ${wrapperModifiers[size](theme)};
   `}
 `;
