@@ -1,13 +1,84 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Template /> should render the heading 1`] = `
+.c1 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 1.6rem;
+  background-image: linear-gradient(to bottom,#1A4173,#0C1D33);
+  position: relative;
+  z-index: 1;
+}
+
+.c1:before {
+  content: '';
+  background-image: linear-gradient(to right,transparent,#fff,transparent);
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  opacity: .5;
+  z-index: 0;
+  -webkit-animation: show 1s linear;
+  animation: show 1s linear;
+}
+
+.c2 {
+  width: 15rem;
+  height: auto;
+}
+
+.c0 {
+  font-size: 1.6rem;
+}
+
+@media (min-width:1024px) {
+  .c1:before {
+    height: 3px;
+  }
+}
+
+@media (min-width:1024px) {
+  .c2 {
+    width: 25rem;
+  }
+}
+
 <div
-  data-testid="Mock Container"
+  class="c0"
 >
   <div
-    data-testid="Template"
+    class="c1"
   >
-    Template
+    <img
+      alt="logo star wars"
+      class="c2"
+      src="/img/logo.png"
+    />
+  </div>
+  <div
+    data-testid="Mock Container"
+  >
+    <div
+      data-testid="Template"
+    >
+      Template
+    </div>
   </div>
 </div>
 `;

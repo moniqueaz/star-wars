@@ -1,10 +1,10 @@
-import { renderWithTheme } from 'utils/tests/helpers';
+import { render } from '@testing-library/react';
 
 import { Container } from './';
 
 describe('<Container />', () => {
   it('should render correctly', () => {
-    const { container } = renderWithTheme(<Container>Conteudo</Container>);
+    const { container } = render(<Container>Conteudo</Container>);
 
     expect(container).toBeInTheDocument();
 

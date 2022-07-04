@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Footer /> should render Container 1`] = `
+.c0 {
+  text-align: center;
+  background-color: #333;
+  width: 100%;
+  padding: .5rem;
+}
+
+@media (min-width:1024px) {
+  .c0 {
+    padding: 2rem;
+  }
+}
+
+<div
+  class="c0"
+>
+  <div
+    data-testid="Mock Container"
+  >
+    <div
+      data-testid="Mock Text"
+    />
+  </div>
+</div>
+`;
