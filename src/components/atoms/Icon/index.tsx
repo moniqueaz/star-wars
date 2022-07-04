@@ -16,7 +16,7 @@ const listIcons = (): ListIconsProps => ( {
   user: User,
 } );
 
-const Icon = ( { width='40px', icon } : IconProps) => {
+const Icon = ( { width='4rem', icon } : IconProps) => {
   const Component = listIcons()[icon];
 
   if (!Component) {

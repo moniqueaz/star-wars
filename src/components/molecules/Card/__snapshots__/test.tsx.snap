@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Card /> should render 1`] = `
+.c3 {
+  width: 100%;
+  color: #1A4173;
+  font-size: 1.4rem;
+}
+
+.c0 {
+  width: 100%;
+  background-color: #f1f1f1;
+}
+
+.c1 {
+  position: relative;
+  margin-bottom: 3rem;
+}
+
+.c5 {
+  color: #1A4173;
+  padding: 0.8rem;
+}
+
+.c5:empty {
+  display: none;
+}
+
+.c4 {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  -webkit-transform: translate(-50%,30%);
+  -ms-transform: translate(-50%,30%);
+  transform: translate(-50%,30%);
+  color: #1A4173;
+  background-color: #f1f1f1;
+  padding: 0.8rem 1.6rem;
+  width: 80%;
+  text-align: center;
+  border-right: 3px solid #1A4173;
+  border-bottom: 3px solid #1A4173;
+}
+
+.c2 {
+  width: 100%;
+}
+
+<div
+  class="c0"
+>
+  <div
+    class="c1"
+  >
+    <img
+      class="c2"
+      src="/"
+    />
+    <p
+      class="c3 c4"
+      color="dark"
+    >
+      Luke Skywalker
+    </p>
+  </div>
+  <ul
+    class="c5"
+  />
+</div>
+`;

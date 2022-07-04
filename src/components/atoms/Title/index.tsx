@@ -3,7 +3,8 @@ import * as S from './styles';
 type TitleProps = {
   children?: React.ReactNode
   type?: 'title' | 'sessionTitle' | 'subTitle',
-  color?: 'light' | 'dark'
+  color?: 'light' | 'dark',
+  className?: string
 }
 
 const titleType = {
@@ -12,13 +13,13 @@ const titleType = {
   subTitle: (title: React.ReactNode) => <S.SubTitle>{title}</S.SubTitle>,
 };
 
-const Title = ( { type = 'title', children, color = 'light' }: TitleProps) => {
+const Title = ( { type = 'title', children, color = 'light', className }: TitleProps) => {
   if (!children) {
     return null;
   }
 
   return (
-    <S.Wrapper color={color}>
+    <S.Wrapper color={color} className={className}>
       {titleType[type](children)}
     </S.Wrapper>
   );

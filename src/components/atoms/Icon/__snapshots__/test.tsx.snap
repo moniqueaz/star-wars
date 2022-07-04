@@ -21,7 +21,7 @@ exports[`<Icon /> should render 1`] = `
     fill="currentColor"
     focusable="false"
     viewBox="0 0 24 24"
-    width="40px"
+    width="4rem"
     xmlns="http://www.w3.org/2000/svg"
   >
     <path
