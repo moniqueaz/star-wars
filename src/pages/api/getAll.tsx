@@ -1,10 +1,14 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-
-const fetcher = (url: string) => fetch(url).then(res => res.json());
+import { fetcher } from 'utils/helpers';
 
 const getAll = async (req: NextApiRequest, res: NextApiResponse) => {
   const result = await fetcher('https://swapi.dev/api/');
-  res.status(200).json(result);
+  try {
+    res.status(200).json(result);
+  } catch (error) {
+    console.info('error: ', error);
+    res.status(500).json(result);
+  }
 };
 
 export default getAll;

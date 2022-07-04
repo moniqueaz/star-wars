@@ -2,8 +2,7 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import * as S from './styles';
 import useSWR from 'swr';
-
-const fetcher = (url: string) => fetch(url).then(res => res.json());
+import { fetcher } from 'utils/helpers';
 const Home: NextPage = () => {
   const { data, error, isValidating } = useSWR(
       '/api/getAll',
