@@ -39,4 +39,11 @@ describe('<Text />', () => {
 
     expect(container.firstChild).toMatchSnapshot();
   } );
+
+  it('should render without children', () => {
+    const { container } = renderWithTheme(<Text/>);
+    expect(container.querySelector('p')).not.toBeInTheDocument();
+
+    expect(container.firstChild).toMatchSnapshot();
+  } );
 } );

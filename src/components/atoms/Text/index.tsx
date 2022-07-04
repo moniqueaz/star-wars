@@ -1,7 +1,7 @@
 import * as S from './styles';
 
 type TextProp = {
-  children: React.ReactNode
+  children?: React.ReactNode
   light?: boolean
   size?: 'small' | 'medium' | 'large'
 }

@@ -69,3 +69,5 @@ exports[`<Text /> should render text small 1`] = `
   Texto do paragrafo
 </p>
 `;
+
+exports[`<Text /> should render without children 1`] = `null`;
