@@ -6,10 +6,16 @@ export const Wrapper = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: ${theme.spacings.xsmall};
     background-image: linear-gradient(to bottom, ${theme.colors.primary}, ${theme.colors.mainBg});
     position: relative;
     z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: ${theme.height.header.mobile};
+    @media(min-width: 1024px){
+      height: ${theme.height.header.desk};
+    }
 
     &:before{
       content: '';

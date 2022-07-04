@@ -2,9 +2,9 @@
 
 exports[`<Container /> should render correctly 1`] = `
 .c0 {
-  padding: 10px;
+  padding: 1rem;
   margin: 0 auto;
-  max-width: 1250px;
+  max-width: 125rem;
   width: 100%;
 }
 

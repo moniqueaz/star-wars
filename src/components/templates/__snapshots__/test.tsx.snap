@@ -15,10 +15,22 @@ exports[`<Template /> should render the heading 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 1.6rem;
   background-image: linear-gradient(to bottom,#1A4173,#0C1D33);
   position: relative;
   z-index: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 4.8rem;
 }
 
 .c1:before {
@@ -43,8 +55,43 @@ exports[`<Template /> should render the heading 1`] = `
   height: auto;
 }
 
+.c4 {
+  text-align: center;
+  background-color: #333;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 4.6rem;
+}
+
+.c5 {
+  width: 100%;
+  color: #f1f1f1;
+  font-size: 1.6rem;
+}
+
 .c0 {
   font-size: 1.6rem;
+}
+
+.c3 {
+  min-height: calc(100vh - 2rem - 4.8rem - 4.6rem);
+}
+
+@media (min-width:1024px) {
+  .c1 {
+    height: 14rem;
+  }
 }
 
 @media (min-width:1024px) {
@@ -56,6 +103,18 @@ exports[`<Template /> should render the heading 1`] = `
 @media (min-width:1024px) {
   .c2 {
     width: 25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c4 {
+    height: 7.6rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c3 {
+    min-height: calc(100vh - 2rem - 14rem - 7.6rem);
   }
 }
 
@@ -75,9 +134,26 @@ exports[`<Template /> should render the heading 1`] = `
     data-testid="Mock Container"
   >
     <div
-      data-testid="Template"
+      class="c3"
     >
-      Template
+      <div
+        data-testid="Template"
+      >
+        Template
+      </div>
+    </div>
+  </div>
+  <div
+    class="c4"
+  >
+    <div
+      data-testid="Mock Container"
+    >
+      <p
+        class="c5"
+      >
+        Star Wars Card Game
+      </p>
     </div>
   </div>
 </div>

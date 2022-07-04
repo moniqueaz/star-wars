@@ -1,5 +1,6 @@
 import { Container } from 'components/atoms/Container';
 import Header from 'components/organisms/Header';
+import Footer from 'components/organisms/Footer';
 import * as S from './styles';
 
 type TemplateProps = {
@@ -11,8 +12,11 @@ const Template = ( { children }: TemplateProps) => {
     <S.Wrapper>
       <Header />
       <Container>
-        {children}
+        <S.Content>
+          {children}
+        </S.Content>
       </Container>
+      <Footer />
     </S.Wrapper>
   );
 };

@@ -15,10 +15,22 @@ exports[`<Header /> should render 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 1.6rem;
   background-image: linear-gradient(to bottom,#1A4173,#0C1D33);
   position: relative;
   z-index: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 4.8rem;
 }
 
 .c0:before {
@@ -36,6 +48,12 @@ exports[`<Header /> should render 1`] = `
   z-index: 0;
   -webkit-animation: show 1s linear;
   animation: show 1s linear;
+}
+
+@media (min-width:1024px) {
+  .c0 {
+    height: 14rem;
+  }
 }
 
 @media (min-width:1024px) {

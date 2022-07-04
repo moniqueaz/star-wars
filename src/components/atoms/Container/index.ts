@@ -1,8 +1,10 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const Container = styled.div`
-    padding: 10px;
-    margin: 0 auto;
-    max-width: 1250px;
-    width: 100%;
+    ${( { theme } ) => css`
+        padding: 1rem;
+        margin: 0 auto;
+        max-width: ${theme.grid.container};
+        width: 100%;
+    `}
 `;

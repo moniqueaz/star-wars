@@ -1,6 +1,6 @@
 export default {
   grid: {
-    container: '130rem',
+    container: '125rem',
     gutter: '3.2rem',
   },
   border: {
@@ -42,6 +42,16 @@ export default {
     large: '4.0rem',
     xlarge: '4.8rem',
     xxlarge: '5.6rem',
+  },
+  height: {
+    header: {
+      desk: '14rem',
+      mobile: '4.8rem',
+    },
+    footer: {
+      desk: '7.6rem',
+      mobile: '4.6rem',
+    },
   },
   layers: {
     base: 10,

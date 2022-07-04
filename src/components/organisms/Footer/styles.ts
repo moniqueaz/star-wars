@@ -5,10 +5,12 @@ export const Wrapper = styled.div`
     text-align: center;
     background-color: ${theme.colors.black};
     width: 100%;
-    padding: .5rem;
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: ${theme.height.footer.mobile};
     @media(min-width: 1024px){
-      padding: 2rem;
+      height: ${theme.height.footer.desk};
     }
   `}
 `;
