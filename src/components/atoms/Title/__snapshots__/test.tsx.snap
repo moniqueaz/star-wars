@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Title /> should render Title 1`] = `
+.c0 {
+  font-size: 2.8rem;
+}
+
+<div
+  class=""
+>
+  <h1
+    class="c0"
+  >
+    Titulo
+  </h1>
+</div>
+`;

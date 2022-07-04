@@ -79,6 +79,7 @@ const GlobalStyles: GlobalStyleComponent<
       line-height: 1;
       font-family: ${theme.font.family};
       font-size: 10px;
+      color: ${theme.colors.white};
       background-color: ${theme.colors.mainBg};
     }
     ol, ul {
