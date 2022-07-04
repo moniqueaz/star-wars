@@ -17,7 +17,7 @@ jest.mock('components/atoms/Container', () => {
 } );
 
 describe('<Template />', () => {
-  it('should render the heading', () => {
+  it('should render', () => {
     const { container } = renderWithTheme(<Template><div data-testid="Template">Template</div></Template>);
     expect(screen.getByTestId('Template')).toBeInTheDocument();
 

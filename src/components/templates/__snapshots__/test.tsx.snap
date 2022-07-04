@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Template /> should render the heading 1`] = `
+exports[`<Template /> should render 1`] = `
 .c1 {
   width: 100%;
   display: -webkit-box;
