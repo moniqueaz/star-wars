@@ -124,11 +124,16 @@ exports[`<Template /> should render 1`] = `
   <div
     class="c1"
   >
-    <img
-      alt="logo star wars"
-      class="c2"
-      src="/img/logo.png"
-    />
+    <a
+      class=""
+      href="/"
+    >
+      <img
+        alt="logo star wars"
+        class="c2"
+        src="/img/logo.png"
+      />
+    </a>
   </div>
   <div
     data-testid="Mock Container"
