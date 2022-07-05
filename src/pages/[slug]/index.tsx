@@ -2,10 +2,33 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import * as S from './styles';
 import { useCount } from 'service/hooks/count';
-import SortCard from 'components/organisms/SortCard';
+// import SortCard from 'components/organisms/SortCard';
+import { getRandomInteger } from 'utils/helpers';
+import { useEffect, useState } from 'react';
 
-const Page: NextPage = () => {
-  const count = useCount();
+const Page: NextPage = ( { router } ) => {
+  const [id, setId] = useState(0);
+  const slug = router?.query?.slug || '';
+
+  const { count, isValidating, error } = useCount(slug);
+
+  useEffect(() => {
+    if (!!count) {
+      setId(getRandomInteger(0, count));
+    }
+  }, [count]);
+
+  const updateId = () => {
+    setId(getRandomInteger(0, count));
+  };
+
+  if (!!error) {
+    return <div>Error</div>;
+  }
+
+  if (isValidating) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <>
@@ -16,7 +39,7 @@ const Page: NextPage = () => {
       </Head>
       <S.Main>
         <S.Content>
-          <SortCard count={count}/>
+          {/* <SortCard count={id} callback={updateId}/> */}
         </S.Content>
       </S.Main>
     </>
@@ -24,3 +47,4 @@ const Page: NextPage = () => {
 };
 
 export default Page;
+

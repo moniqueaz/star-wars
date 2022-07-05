@@ -4,8 +4,9 @@ import { ThemeProvider } from 'styled-components';
 import GlobalStyles from 'styles/global';
 import theme from 'styles/theme';
 import Template from 'components/templates';
-
+import { useRouter } from 'next/router';
 function MyApp( { Component, pageProps }: AppProps) {
+  const router = useRouter();
   return (
     <ThemeProvider theme={theme}>
       <Head>
@@ -17,7 +18,7 @@ function MyApp( { Component, pageProps }: AppProps) {
       </Head>
       <GlobalStyles />
       <Template>
-        <Component {...pageProps} />
+        <Component {...pageProps} router={router} />
       </Template>
     </ThemeProvider>
   );
