@@ -6,6 +6,7 @@ const get = async (req: NextApiRequest, res: NextApiResponse) => {
   const slug = req?.query?.slug;
   const result = await fetcher(`${config.api}/${slug}`);
   try {
+    res.setHeader('Cache-Control', 's-maxage=86400');
     res.status(200).json(result);
   } catch (error) {
     console.info('error: ', error);

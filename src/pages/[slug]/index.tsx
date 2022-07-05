@@ -6,13 +6,6 @@ import SortCard from 'components/organisms/SortCard';
 
 const Page: NextPage = () => {
   const count = useCount();
-  // if (!!error) {
-  //   return <div>Error</div>;
-  // }
-
-  // if (isValidating) {
-  //   return <div>Loading...</div>;
-  // }
 
   return (
     <>

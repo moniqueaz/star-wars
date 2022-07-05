@@ -7,6 +7,7 @@ const getOne = async (req: NextApiRequest, res: NextApiResponse) => {
   const id = req?.query?.id;
   const result = await fetcher(`${config.api}/${slug}/${id}`);
   try {
+    res.setHeader('Cache-Control', 's-maxage=86400');
     res.status(200).json(result);
   } catch (error) {
     console.info('error: ', error);
