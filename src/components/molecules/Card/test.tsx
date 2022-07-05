@@ -20,7 +20,7 @@ describe('<Card />', () => {
   } );
 
   it('should render with list', () => {
-    renderWithTheme(<Card image="/" title="Luke Skywalker" list={{
+    renderWithTheme(<Card image="/" title="Luke Skywalker" data={{
       height: '172',
       mass: '77',
       hair_color: 'blond',

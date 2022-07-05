@@ -13,7 +13,7 @@ export const Default: Story = args => {
         {...args}
         image="https://via.placeholder.com/150"
         title="Luke Skywalker"
-        list={{
+        data={{
           height: '172',
           mass: '77',
           hair_color: 'blond',

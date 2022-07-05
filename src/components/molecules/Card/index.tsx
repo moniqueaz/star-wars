@@ -1,14 +1,14 @@
 import * as S from './styles';
 import Image from 'components/atoms/Image';
 
-type ListProps = {[key: string]: string | string[] | number | boolean }
+type DataProps = {[key: string]: string | string[] | number | boolean }
 
 type CardProps = {
   image: string,
   title: string,
-  list?: ListProps
+  data?: DataProps
 }
-const Card = ( { image, title, list = {} }: CardProps) => (
+const Card = ( { image, title, data = {} }: CardProps) => (
   <S.Wrapper>
     <S.Top>
       <Image src={image} size="full"/>
@@ -16,9 +16,9 @@ const Card = ( { image, title, list = {} }: CardProps) => (
     </S.Top>
     <S.List>
       {
-        Object.keys(list).map((item: string) => <S.Item key={item}>
+        Object.keys(data).map((item: string) => <S.Item key={item}>
           <S.Label>{item.replace(/_/ig, ' ')}</S.Label>
-          <S.Value>{list[item]}</S.Value>
+          <S.Value>{data[item]}</S.Value>
         </S.Item>)
       }
     </S.List>
