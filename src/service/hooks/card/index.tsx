@@ -8,7 +8,7 @@ export const useCard = (slug: string | string[], id: number) => {
       fetcher,
   );
 
-  const excludedList = ['name', 'homeworld', 'films', 'species', 'vehicles', 'starships', 'created', 'edited', 'url', 'residents', 'characters', 'planets', 'opening_crawl', 'people'];
+  const excludedList = ['name', 'homeworld', 'films', 'species', 'vehicles', 'starships', 'created', 'edited', 'url', 'residents', 'characters', 'planets', 'opening_crawl', 'people', 'pilots'];
   const list = data ? Object.keys(data).filter(item => !excludedList.includes(item)) : [];
 
   const props = {
