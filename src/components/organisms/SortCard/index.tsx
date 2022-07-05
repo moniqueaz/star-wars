@@ -16,13 +16,15 @@ const SortCard = ( { count, callback, slug }:SortCardProps) => {
     return <div>Error</div>;
   }
 
-  if (isValidating) {
-    return <div>Loading...</div>;
-  }
-
   return (
     <S.Wrapper>
-      <Card title={data.title} data={data.card} image="https://via.placeholder.com/250"/>
+      <S.Content>
+        {
+        isValidating ? <div>Loading...</div> : (
+          <Card title={data.title} data={data.card} image="https://via.placeholder.com/250"/>
+          )
+        }
+      </S.Content>
       <Button color="secondary" callback={callback}>Play</Button>
     </S.Wrapper>
   );

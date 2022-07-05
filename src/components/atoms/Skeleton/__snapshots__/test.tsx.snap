@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Skeleton /> should render the heading 1`] = `
+.c0 {
+  width: 100%;
+  height: 100%;
+  background: #8F8F8F;
+  border-radius: 0.4rem;
+  overflow: hidden;
+  -webkit-animation: fullView 0.5s forwards cubic-bezier(0.25,0.46,0.45,0.94);
+  animation: fullView 0.5s forwards cubic-bezier(0.25,0.46,0.45,0.94);
+}
+
+.c1 {
+  width: 100%;
+  height: 100%;
+  background: #8F8F8F;
+  opacity: 30%;
+  -webkit-animation: shimmer 2s infinite linear;
+  animation: shimmer 2s infinite linear;
+  background: linear-gradient(135deg,#8F8F8F 30%,#f1f1f1 50%,#8F8F8F 70%);
+  background-size: 300% 100%;
+}
+
+<div
+  class="c0"
+>
+  <div
+    class="c1"
+  />
+</div>
+`;

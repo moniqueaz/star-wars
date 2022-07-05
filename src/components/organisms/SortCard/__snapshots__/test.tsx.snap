@@ -5,8 +5,12 @@ exports[`<SortCard /> should render button and card 1`] = `
   class=""
 >
   <div
-    data-testid="Mock Card"
-  />
+    class=""
+  >
+    <div
+      data-testid="Mock Card"
+    />
+  </div>
   <div
     data-testid="Mock Button"
   />
