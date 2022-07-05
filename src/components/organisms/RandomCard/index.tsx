@@ -2,14 +2,15 @@ import * as S from './styles';
 import { useCard } from 'service/hooks/card';
 import Card from 'components/molecules/Card';
 import Button from 'components/atoms/Button';
+import Placeholder from './placeholder';
 
-type SortCardProps = {
+type RandomCardProps = {
   count: number,
   callback?: () => any,
   slug: string | string[]
 }
 
-const SortCard = ( { count, callback, slug }:SortCardProps) => {
+const RandomCard = ( { count, callback, slug }:RandomCardProps) => {
   const { data, error, isValidating } = useCard(slug, count);
 
   if (!!error) {
@@ -20,14 +21,14 @@ const SortCard = ( { count, callback, slug }:SortCardProps) => {
     <S.Wrapper>
       <S.Content>
         {
-        isValidating ? <div>Loading...</div> : (
+        isValidating ? <Placeholder /> : (
           <Card title={data.title} data={data.card} image="https://via.placeholder.com/250"/>
           )
         }
       </S.Content>
-      <Button color="secondary" callback={callback}>Play</Button>
+      <Button color="secondary" callback={callback}>Random</Button>
     </S.Wrapper>
   );
 };
 
-export default SortCard;
+export default RandomCard;

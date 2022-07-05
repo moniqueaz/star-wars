@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import * as Card from 'service/hooks/card';
-import SortCard from '.';
+import RandomCard from '.';
 
 jest.mock('service/hooks/card');
 
@@ -22,13 +22,13 @@ jest.mock('components/molecules/Card', () => {
   };
 } );
 
-describe('<SortCard />', () => {
+describe('<RandomCard />', () => {
   it('should render button and card', () => {
     jest.spyOn(Card, 'useCard').mockReturnValue( {
       data: { title: 'Titulo', card: { nave: 'nave' } }, error: '',
       isValidating: false,
     } );
-    const { container } = render(<SortCard count={5} slug="people"/>);
+    const { container } = render(<RandomCard count={5} slug="people"/>);
     expect(screen.getByTestId('Mock Button')).toBeInTheDocument();
     expect(screen.getByTestId('Mock Card')).toBeInTheDocument();
 
@@ -40,7 +40,7 @@ describe('<SortCard />', () => {
       data: { title: '', card: {} }, error: 'error message',
       isValidating: false,
     } );
-    render(<SortCard count={5} slug="people"/>);
+    render(<RandomCard count={5} slug="people"/>);
     expect(screen.getByText(/Error/i)).toBeInTheDocument();
   } );
 
@@ -49,7 +49,7 @@ describe('<SortCard />', () => {
       data: { title: '', card: {} }, error: '',
       isValidating: true,
     } );
-    render(<SortCard count={5} slug="people"/>);
+    render(<RandomCard count={5} slug="people"/>);
     expect(screen.getByText(/Loading/i)).toBeInTheDocument();
   } );
 } );

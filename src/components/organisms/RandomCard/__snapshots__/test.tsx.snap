@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<SortCard /> should render button and card 1`] = `
+exports[`<RandomCard /> should render button and card 1`] = `
 <div
   class=""
 >
