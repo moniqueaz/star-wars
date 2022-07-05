@@ -8,3 +8,5 @@ export const Image = styled.img`
     width: 25rem;
   }
 `;
+
+export const Link = styled.a``;
