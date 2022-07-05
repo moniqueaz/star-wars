@@ -34,4 +34,9 @@ describe('<Button />', () => {
     const { container } = renderWithTheme(<Button color="light">Button</Button>);
     expect(container.querySelector('button')).toHaveStyle( { ['background-color']: '#f1f1f1' } );
   } );
+
+  it('should render secondary', () => {
+    const { container } = renderWithTheme(<Button color="secondary">Button</Button>);
+    expect(container.querySelector('button')).toHaveStyle( { ['background-color']: '#FFE820' } );
+  } );
 } );

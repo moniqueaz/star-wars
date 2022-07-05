@@ -21,3 +21,7 @@ export const Full: Story = () => {
 export const Dark: Story = () => {
   return <Button color="dark">Button Text</Button>;
 };
+
+export const Secondary: Story = () => {
+  return <Button color="secondary">Button Text</Button>;
+};
