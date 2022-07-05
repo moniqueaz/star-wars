@@ -1,7 +1,10 @@
 import useSWR from 'swr';
+import { useRouter } from 'next/router';
 import { fetcher } from 'utils/helpers';
 
-export const useCard = (slug: string | string[], id: number) => {
+export const useCard = (id: number) => {
+  const router = useRouter();
+  const slug = router?.query?.slug || '';
   const { data, error, isValidating } = useSWR(
       `/api/getOne/${slug}/${id}`,
       fetcher,
@@ -12,7 +15,7 @@ export const useCard = (slug: string | string[], id: number) => {
 
   const props = {
     title: data?.name,
-    list: list.reduce((initial, item) => ( { ...initial, [item]: data[item] } ), {} ),
+    card: list.reduce((initial, item) => ( { ...initial, [item]: data[item] } ), {} ),
   };
 
   return { data: props, error, isValidating };
