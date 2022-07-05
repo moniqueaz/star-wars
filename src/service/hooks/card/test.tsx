@@ -47,7 +47,7 @@ describe('useCard', () => {
 
     expect(data).toEqual( {
       title: 'Luke Skywalker',
-      list: {
+      card: {
         height: '172',
         mass: '77',
         hair_color: 'blond',

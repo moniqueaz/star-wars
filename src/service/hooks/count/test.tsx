@@ -53,6 +53,6 @@ describe('useCount', () => {
   it('should return data', () => {
     const count = useCount('peaple');
 
-    expect(count).toEqual(1);
+    expect(count).toEqual( { count: 82, error: undefined, isValidating: false } );
   } );
 } );
