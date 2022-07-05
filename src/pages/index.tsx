@@ -5,6 +5,7 @@ import useSWR from 'swr';
 import { fetcher } from 'utils/helpers';
 import Card from 'components/molecules/Card';
 import config from 'infra/config';
+import Loading from 'components/atoms/Loading';
 const Home: NextPage = () => {
   const { data, error, isValidating } = useSWR(
       `${config.getAll}`,
@@ -16,7 +17,7 @@ const Home: NextPage = () => {
   }
 
   if (isValidating) {
-    return <div>Loading...</div>;
+    return <Loading size="large"/>;
   }
 
   return (

@@ -2,10 +2,10 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import * as S from './styles';
 import { useCount } from 'service/hooks/count';
-import SortCard from 'components/organisms/SortCard';
+import RandomCard from 'components/organisms/RandomCard';
 import { getRandomInteger } from 'utils/helpers';
 import { useEffect, useState } from 'react';
-
+import Loading from 'components/atoms/Loading';
 const Page: NextPage = ( { router } ) => {
   const [id, setId] = useState(0);
   const slug = router?.query?.slug || '';
@@ -27,7 +27,7 @@ const Page: NextPage = ( { router } ) => {
   }
 
   if (isValidating) {
-    return <div>Loading...</div>;
+    return <Loading size="large"/>;
   }
 
   return (
@@ -39,7 +39,7 @@ const Page: NextPage = ( { router } ) => {
       </Head>
       <S.Main>
         <S.Content>
-          <SortCard count={id} callback={updateId} slug={slug}/>
+          <RandomCard count={id} callback={updateId} slug={slug}/>
         </S.Content>
       </S.Main>
     </>
