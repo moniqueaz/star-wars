@@ -2,7 +2,7 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import * as S from './styles';
 import { useCount } from 'service/hooks/count';
-// import SortCard from 'components/organisms/SortCard';
+import SortCard from 'components/organisms/SortCard';
 import { getRandomInteger } from 'utils/helpers';
 import { useEffect, useState } from 'react';
 
@@ -39,7 +39,7 @@ const Page: NextPage = ( { router } ) => {
       </Head>
       <S.Main>
         <S.Content>
-          {/* <SortCard count={id} callback={updateId}/> */}
+          <SortCard count={id} callback={updateId} slug={slug}/>
         </S.Content>
       </S.Main>
     </>
