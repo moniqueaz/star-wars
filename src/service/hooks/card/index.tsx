@@ -1,12 +1,13 @@
 import useSWR from 'swr';
 import { useRouter } from 'next/router';
 import { fetcher } from 'utils/helpers';
+import config from 'infra/config';
 
 export const useCard = (id: number) => {
   const router = useRouter();
   const slug = router?.query?.slug || '';
   const { data, error, isValidating } = useSWR(
-      `/api/getOne/${slug}/${id}`,
+      `${config.getOne}/${slug}/${id}`,
       fetcher,
   );
 

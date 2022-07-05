@@ -1,22 +1,18 @@
 import type { NextPage } from 'next';
-import { useRouter } from 'next/router';
 import Head from 'next/head';
 import * as S from './styles';
-import { useCard } from 'service/hooks/card';
-import Card from 'components/molecules/Card';
+import { useCount } from 'service/hooks/count';
+import SortCard from 'components/organisms/SortCard';
 
 const Page: NextPage = () => {
-  const router = useRouter();
-  const slug = router?.query?.slug || '';
-  const { data, error, isValidating } = useCard(slug, 1);
+  const count = useCount();
+  // if (!!error) {
+  //   return <div>Error</div>;
+  // }
 
-  if (!!error) {
-    return <div>Error</div>;
-  }
-
-  if (isValidating) {
-    return <div>Loading...</div>;
-  }
+  // if (isValidating) {
+  //   return <div>Loading...</div>;
+  // }
 
   return (
     <>
@@ -27,7 +23,7 @@ const Page: NextPage = () => {
       </Head>
       <S.Main>
         <S.Content>
-          <Card title={data?.title} list={data.list} image="https://via.placeholder.com/250"/>
+          <SortCard count={count}/>
         </S.Content>
       </S.Main>
     </>

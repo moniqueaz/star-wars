@@ -1,10 +1,10 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { fetcher } from 'utils/helpers';
-import config from 'infra/config.json';
+import config from 'infra/config';
 
 const get = async (req: NextApiRequest, res: NextApiResponse) => {
   const slug = req?.query?.slug;
-  const result = await fetcher(`${config.api}/api/${slug}`);
+  const result = await fetcher(`${config.api}/${slug}`);
   try {
     res.status(200).json(result);
   } catch (error) {

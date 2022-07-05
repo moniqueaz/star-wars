@@ -4,9 +4,10 @@ import * as S from './styles';
 import useSWR from 'swr';
 import { fetcher } from 'utils/helpers';
 import Card from 'components/molecules/Card';
+import config from 'infra/config';
 const Home: NextPage = () => {
   const { data, error, isValidating } = useSWR(
-      '/api/getAll',
+      `${config.getAll}`,
       fetcher,
   );
 
