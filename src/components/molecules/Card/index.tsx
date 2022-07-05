@@ -17,10 +17,8 @@ const Card = ( { image, title, list = {} }: CardProps) => (
     <S.List>
       {
         Object.keys(list).map((item: string) => <S.Item key={item}>
-          <S.Item>
-            <S.Label>{item.replace(/_/ig, ' ')}</S.Label>
-            <S.Value>{list[item]}</S.Value>
-          </S.Item>
+          <S.Label>{item.replace(/_/ig, ' ')}</S.Label>
+          <S.Value>{list[item]}</S.Value>
         </S.Item>)
       }
     </S.List>
